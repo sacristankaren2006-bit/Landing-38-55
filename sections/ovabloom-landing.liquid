@@ -1,0 +1,748 @@
+{% comment %} OvaBloom — landing completa. Generada a partir del diseño aprobado. {% endcomment %}
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;display=swap" rel="stylesheet">
+<style>
+
+
+.ovb-root a{color:#B84E25}.ovb-root a:hover{color:#8F3B1B}
+.ovb-root button{font:inherit}
+.ovb-root strong,.ovb-root b{font-weight:500}
+.cta{transition:transform .25s ease, box-shadow .25s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 20px 40px -10px rgba(147,54,26,0.6),0 6px 14px -4px rgba(147,54,26,0.35),inset 0 1px 0 rgba(255,255,255,0.18)}
+@media (prefers-reduced-motion: reduce){.cta{transition:none}.cta:hover{transform:none}}
+.flt{transition:transform .3s ease, box-shadow .3s ease}
+.flt:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(60,30,15,0.06),0 30px 56px -16px rgba(60,30,15,0.28)}
+@media (prefers-reduced-motion: reduce){.flt{transition:none}.flt:hover{transform:none}}
+
+.ovb-root [data-ovif]{display:contents}.ovb-root [data-ovif][hidden]{display:none!important}
+</style>
+<div class="ovb-root" data-ovb-root data-assets="{{ 'ovb-frasco.png' | asset_url | split: 'ovb-frasco.png' | first }}" data-variant-1="{{ section.settings.variant_1 }}" data-variant-2="{{ section.settings.variant_2 }}" data-variant-3="{{ section.settings.variant_3 }}" data-selling-plan-1="{{ section.settings.selling_plan_1 }}" data-selling-plan-2="{{ section.settings.selling_plan_2 }}" data-selling-plan-3="{{ section.settings.selling_plan_3 }}">
+
+<div style="background: #FFFFFF; color: #1A1A1A; font-family: 'Outfit', sans-serif; font-size: 15px; line-height: 1.55; position: relative">
+
+{% if section.settings.show_topbar %}<div style="background: #7A2C14; color: #FFFFFF; padding: 12px 20px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 20px; text-align: center">
+<span style="font-family: 'Outfit', sans-serif; font-size: 12px; letter-spacing: 0.18em; font-weight: 500; color: #FFC9AE">OFERTAS DE FIN DE AÑO | HASTA 31% DE AHORRO</span>
+</div>
+{% endif %}
+{% if section.settings.show_header %}<header style="background: #FFFFFF; border-bottom: 1px solid #E4E2E0">
+<div style="max-width: 1160px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<button type="button" aria-label="Abrir menú" style="width: 44px; height: 44px; border: none; background: transparent; color: #1A1A1A; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+<a href="#" aria-label="HerBalance, inicio" style="display: flex; align-items: center; min-height: 44px"><img src="{{ 'ovb-logo.svg' | asset_url }}" alt="herbalance" style="height: 34px; width: auto; display: block"></a>
+<button type="button" aria-label="Ver carrito" style="width: 44px; height: 44px; border: none; background: transparent; color: #1A1A1A; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 016 0v2"></path></svg></button>
+</div>
+</header>{% endif %}
+
+<section style="max-width: 1160px; margin: 0 auto; padding: 28px 20px 48px; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 12px; align-items: stretch">
+<div style="flex: 0 0 26%; max-width: 128px; display: flex; flex-direction: column; gap: 10px"><div style="flex: 1 1 0; min-height: 0; background: #FCE6DB; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 8px; text-align: center"><svg width="30" height="30" style="flex: 0 0 auto; display: block" viewBox="0 0 24 24" aria-hidden="true"><circle cx="21.0" cy="12.0" r="0.8" fill="#EE7F4B"></circle><circle cx="19.8" cy="16.5" r="1.2" fill="#EE7F4B"></circle><circle cx="16.5" cy="19.8" r="0.8" fill="#EE7F4B"></circle><circle cx="12.0" cy="21.0" r="1.2" fill="#EE7F4B"></circle><circle cx="7.5" cy="19.8" r="0.8" fill="#EE7F4B"></circle><circle cx="4.2" cy="16.5" r="1.2" fill="#EE7F4B"></circle><circle cx="3.0" cy="12.0" r="0.8" fill="#EE7F4B"></circle><circle cx="4.2" cy="7.5" r="1.2" fill="#EE7F4B"></circle><circle cx="7.5" cy="4.2" r="0.8" fill="#EE7F4B"></circle><circle cx="12.0" cy="3.0" r="1.2" fill="#EE7F4B"></circle><circle cx="16.5" cy="4.2" r="0.8" fill="#EE7F4B"></circle><circle cx="19.8" cy="7.5" r="1.2" fill="#EE7F4B"></circle><circle cx="12" cy="12" r="1.6" fill="#EE7F4B"></circle><circle cx="8" cy="10" r="0.9" fill="#EE7F4B"></circle><circle cx="16" cy="14" r="0.9" fill="#EE7F4B"></circle></svg><span style="font-family: 'Outfit', sans-serif; font-size: 12.5px; line-height: 1.4; letter-spacing: 0.16em; font-weight: 300; color: #2E2A27">FÓRMULA<br>40:1</span></div><div style="flex: 1 1 0; min-height: 0; background: #FFFFFF; border: 1px solid #F3D6C6; box-sizing: border-box; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 8px; text-align: center"><svg width="30" height="30" style="flex: 0 0 auto; display: block" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span style="font-family: 'Outfit', sans-serif; font-size: 12.5px; line-height: 1.4; letter-spacing: 0.16em; font-weight: 300; color: #2E2A27">REGISTRO<br>INVIMA</span></div><div style="flex: 1 1 0; min-height: 0; background: #FCE6DB; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 8px; text-align: center"><svg width="30" height="30" style="flex: 0 0 auto; display: block" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10M8 4v5l-3 9a2 2 0 002 2h10a2 2 0 002-2l-3-9V4"></path><path d="M5.5 16h13"></path></svg><span style="font-family: 'Outfit', sans-serif; font-size: 12.5px; line-height: 1.4; letter-spacing: 0.16em; font-weight: 300; color: #2E2A27">SIN<br>HORMONAS</span></div><div style="flex: 1 1 0; min-height: 0; background: #FFFFFF; border: 1px solid #F3D6C6; box-sizing: border-box; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 14px 8px; text-align: center"><svg width="30" height="30" style="flex: 0 0 auto; display: block" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-4.5-1.5-7.5-5.5-7.5-9.5a4.5 4.5 0 017.5-3.3 4.5 4.5 0 017.5 3.3c0 4-3 8-7.5 9.5z"></path><path d="M12 5V3M10 3.5h4"></path></svg><span style="font-family: 'Outfit', sans-serif; font-size: 12.5px; line-height: 1.4; letter-spacing: 0.16em; font-weight: 300; color: #2E2A27">SABOR A<br>FRESA</span></div></div>
+<div style="flex: 1 1 auto; min-width: 0; position: relative; overflow: hidden; aspect-ratio: 1 / 1; background: #F9EBE1; border-radius: 26px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 24px; box-sizing: border-box">
+<img src="{{ 'ovb-hero-01-oferta.jpg' | asset_url }}" alt="OvaBloom más 2 regalos: guía de estilo y asesoría por 3 días. Ofertas de fin de año" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block" data-ovb data-ovt-src="[[g.src]]" data-ovt-alt="[[g.alt]]">
+<button type="button" aria-label="Imagen anterior" style="position: absolute; left: 14px; bottom: 18px; width: 48px; height: 48px; border-radius: 50%; border: none; background: #FFFFFF; color: #1A1A1A; box-shadow: 0 6px 18px -6px rgba(60,30,15,0.35); display: flex; align-items: center; justify-content: center; cursor: pointer" data-ovb data-ovclick="g.prev"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"></path></svg></button><button type="button" aria-label="Imagen siguiente" style="position: absolute; right: 14px; bottom: 18px; width: 48px; height: 48px; border-radius: 50%; border: none; background: #FFFFFF; color: #1A1A1A; box-shadow: 0 6px 18px -6px rgba(60,30,15,0.35); display: flex; align-items: center; justify-content: center; cursor: pointer" data-ovb data-ovclick="g.next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></button>
+</div>
+</div>
+<div style="display: flex; gap: 10px; overflow-x: auto; padding-left: calc(min(26%, 128px) + 12px)"><button type="button" aria-label="Ver imagen 1" aria-pressed="true" style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid #EE7F4B; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer" data-ovb data-ovt-aria-pressed="[[th0.aria]]" data-ovclick="th0.pick" data-ovt-style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid [[th0.border]]; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer"><img src="{{ 'ovb-hero-01-oferta.jpg' | asset_url }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" aria-label="Ver imagen 2" aria-pressed="false" style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid transparent; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer" data-ovb data-ovt-aria-pressed="[[th1.aria]]" data-ovclick="th1.pick" data-ovt-style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid [[th1.border]]; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer"><img src="{{ 'ovb-hero-02-formula.jpg' | asset_url }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" aria-label="Ver imagen 3" aria-pressed="false" style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid transparent; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer" data-ovb data-ovt-aria-pressed="[[th2.aria]]" data-ovclick="th2.pick" data-ovt-style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid [[th2.border]]; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer"><img src="{{ 'ovb-hero-03-beneficios.jpg' | asset_url }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" aria-label="Ver imagen 4" aria-pressed="false" style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid transparent; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer" data-ovb data-ovt-aria-pressed="[[th3.aria]]" data-ovclick="th3.pick" data-ovt-style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid [[th3.border]]; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer"><img src="{{ 'ovb-hero-04-semanas.jpg' | asset_url }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" aria-label="Ver imagen 5" aria-pressed="false" style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid transparent; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer" data-ovb data-ovt-aria-pressed="[[th4.aria]]" data-ovclick="th4.pick" data-ovt-style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid [[th4.border]]; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer"><img src="{{ 'ovb-hero-05-ingredientes.jpg' | asset_url }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button><button type="button" aria-label="Ver imagen 6" aria-pressed="false" style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid transparent; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer" data-ovb data-ovt-aria-pressed="[[th5.aria]]" data-ovclick="th5.pick" data-ovt-style="flex: 0 0 calc((100% - 30px) / 4); aspect-ratio: 1 / 1; border-radius: 14px; position: relative; border: 2px solid [[th5.border]]; padding: 0; background: #F9EBE1; box-sizing: border-box; overflow: hidden; cursor: pointer"><img src="{{ 'ovb-hero-06-comparacion.jpg' | asset_url }}" alt="" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></button></div>
+</div>
+
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+
+<div style="background: #FFFFFF; border: 1px solid transparent; border-radius: 28px; padding: 28px 20px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px">
+<span style="font-size: 15px"><span role="img" aria-label="4.9 de 5 estrellas" style="display: inline-flex; letter-spacing: 2px; color: #EE7F4B">★★★★<span style="position: relative; display: inline-block; letter-spacing: 0; color: #F3D6C6">★<span aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 72%; overflow: hidden; white-space: nowrap; color: #EE7F4B">★</span></span></span> <strong>4.9</strong> <span style="color: #5F5B58">· 2.800 reseñas verificadas</span></span>
+<span style="display: inline-flex; align-items: center; gap: 10px; border: 1.5px solid #E2DDD6; background: #FAF8F4; border-radius: 999px; padding: 6px 18px 6px 12px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2E7D5B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto"><path d="M12 3l7 3v6c0 4-3 7.5-7 9-4-1.5-7-5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span style="display: inline-flex; flex-direction: column; line-height: 1.1"><span style="font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.08em; color: #6B6661">REGISTRO SANITARIO INVIMA</span><span style="font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: 0.03em; color: #3A3734">RSA-0245-2025</span></span></span>
+</div>
+<h1 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 38px; line-height: 1; letter-spacing: -0.02em">OvaBloom</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.35; font-weight: 500">La fórmula 40:1 contra los gases atrapados y la barriga que no cede con nada.</p>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Actúa desde el interior mejorando tu <strong style="color: #1A1A1A">sensibilidad a la insulina</strong> ante la caída de estrógenos, sin fajas ni remedios temporales.</p>
+<div style="height: 1px; background: #E4E2E0"></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; margin-top: 3px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5B58"><strong style="font-weight: 500; color: #1A1A1A">Adiós a los gases atrapados.</strong> Apoya tu ritmo digestivo para dejar atrás la distensión y la pesadez de globo después del almuerzo.</p>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; margin-top: 3px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5B58"><strong style="font-weight: 500; color: #1A1A1A">Reducción de la barriga terca.</strong> Apaga la señal de almacenamiento visceral para que el abdomen bajo por fin ceda.</p>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start">
+<span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; margin-top: 3px"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5F5B58"><strong style="font-weight: 500; color: #1A1A1A">Tu armario y tu ropa sin restricciones.</strong> Vuelve a abrir el armario y ponte ese vestido o tus jeans con absoluta confianza.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #5F5B58; display: flex; align-items: center; gap: 8px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #EE7F4B"></span>Llega en 3 a 5 días hábiles · Envío gratis</p>
+</div>
+
+<div id="planes" style="display: flex; flex-direction: column; gap: 12px; padding-top: 8px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px; padding-bottom: 22px; border-bottom: 1px solid #E4E2E0">
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 24px; line-height: 1.2; letter-spacing: -0.01em; color: #93361A"><span data-ovtx="plansTitle">Elige tu plan</span></h2>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px">
+<span><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 22px; color: #93361A"><span data-ovtx="total">$198.000</span></strong> <s style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 15.5px; color: #5F5B58"><span data-ovtx="totalOld">$230.000</span></s></span>
+<span style="background: #93361A; color: #FFFFFF; border-radius: 999px; padding: 6px 16px; font-family: 'Outfit', sans-serif; font-size: 13px; letter-spacing: 0.03em; font-weight: 400; box-shadow: 0 6px 16px -8px rgba(147,54,26,0.55)"><span data-ovtx="badge">Rebajas de fin de año · ahorras $32.000</span></span>
+</div>
+</div>
+
+<button type="button" aria-pressed="false" style="width: 100%; text-align: left; cursor: pointer; border: 1px solid #D9D9D9; background: #FFFFFF; color: #1A1A1A; border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 11px" data-ovb data-ovclick="pick1" data-ovt-aria-pressed="[[b1.aria]]" data-ovt-style="width: 100%; text-align: left; cursor: pointer; border: 1px solid [[b1.border]]; background: [[b1.bg]]; color: #1A1A1A; border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 11px">
+<span style="display: flex; align-items: center; gap: 12px; width: 100%">
+<span role="img" aria-label="1 frasco de OvaBloom" style="flex: 0 0 96px; height: 80px; border-radius: 12px; background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FCEDE4 60%, #F8DECF 100%); position: relative; overflow: hidden; display: block"><span aria-hidden="true" style="position: absolute; left: 18%; right: 18%; bottom: 7px; height: 8px; border-radius: 50%; background: radial-gradient(closest-side, rgba(120,50,20,0.28), rgba(120,50,20,0))"></span><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="position: absolute; bottom: 9px; left: 50%; transform: translateX(-50%); height: 64px; width: auto; z-index: 2; filter: drop-shadow(0 10px 14px rgba(120,50,20,0.22)) drop-shadow(0 2px 3px rgba(60,30,15,0.15))"></span>
+<span style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px">1 frasco</strong><span style="font-size: 16.5px"><span data-ovtx="p1.save">Precio regular</span></span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px"><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px; color: #EE7F4B"><span data-ovtx="p1.price">$115.000</span></strong><s style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 15px; color: #5F5B58"><span data-ovtx="p1.old"></span></s></span>
+</span>
+<div data-ovif="b1.on" hidden>
+<span style="display: flex; flex-direction: column; gap: 10px; width: 100%; border-top: 1px solid #E4E2E0; padding-top: 18px">
+<span style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">1x OvaBloom 40:1 ($115.000 valor)</strong><span style="font-size: 15px; color: #5F5B58">Mio + D-chiro inositol 40:1 · 1 mes</span></span></span>
+<div data-ovif="sub" hidden><span style="display: flex; gap: 10px; align-items: center; font-size: 15px; color: #5F5B58"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M20 11a8 8 0 10-2.3 5.7M20 5v6h-6"></path></svg>Se envía cada 30 días · Pausa o cancela cuando quieras</span></div>
+<span style="display: flex; align-items: center; gap: 12px; width: 100%"><span style="flex: 1 1 auto; height: 1px; background: #E4E4E4"></span><span style="font-size: 13px; font-family: 'Outfit', sans-serif; letter-spacing: 0.2em; font-weight: 400; color: #EE7F4B">MÁS REGALOS GRATIS</span><span style="flex: 1 1 auto; height: 1px; background: #E4E4E4"></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Envío GRATIS ($25.000)</strong><span style="font-size: 15px; color: #5F5B58">A toda Colombia</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Guía GRATIS: Favorecer tu silueta ($62.000)</strong><span style="font-size: 15px; color: #5F5B58">Guía digital</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Asesoría GRATIS para tu caso x 3 días ($150.000)</strong><span style="font-size: 15px; color: #5F5B58">Por WhatsApp</span></span></span>
+</span>
+</div>
+</button>
+
+<div style="position: relative; padding-top: 14px">
+<span style="position: absolute; top: 0; right: 28px; background: #EE7F4B; color: #FFFFFF; border-radius: 999px; padding: 5px 22px; font-family: 'Outfit', sans-serif; font-size: 14px; letter-spacing: 0.08em; font-weight: 400; z-index: 1">Más popular</span>
+<button type="button" aria-pressed="true" style="width: 100%; text-align: left; cursor: pointer; border: 1px solid #EE7F4B; background: #FEF4EE; color: #1A1A1A; border-radius: 18px; padding: 20px 18px 16px; display: flex; flex-direction: column; gap: 11px" data-ovb data-ovclick="pick2" data-ovt-aria-pressed="[[b2.aria]]" data-ovt-style="width: 100%; text-align: left; cursor: pointer; border: 1px solid [[b2.border]]; background: [[b2.bg]]; color: #1A1A1A; border-radius: 18px; padding: 20px 18px 16px; display: flex; flex-direction: column; gap: 11px">
+<span style="display: flex; align-items: center; gap: 12px; width: 100%">
+<span role="img" aria-label="2 frascos de OvaBloom" style="flex: 0 0 96px; height: 80px; border-radius: 12px; background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FCEDE4 60%, #F8DECF 100%); position: relative; overflow: hidden; display: block"><span aria-hidden="true" style="position: absolute; left: 18%; right: 18%; bottom: 7px; height: 8px; border-radius: 50%; background: radial-gradient(closest-side, rgba(120,50,20,0.28), rgba(120,50,20,0))"></span><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="position: absolute; bottom: 9px; left: 36%; transform: translateX(-50%); height: 54px; width: auto; z-index: 1; filter: drop-shadow(0 10px 14px rgba(120,50,20,0.22)) drop-shadow(0 2px 3px rgba(60,30,15,0.15)); opacity: 0.97"><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="position: absolute; bottom: 9px; left: 60%; transform: translateX(-50%); height: 64px; width: auto; z-index: 2; filter: drop-shadow(0 10px 14px rgba(120,50,20,0.22)) drop-shadow(0 2px 3px rgba(60,30,15,0.15))"></span>
+<span style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px">2 frascos</strong><span style="font-size: 16.5px"><span data-ovtx="p2.save">Ahorras $32.000</span></span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px"><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px; color: #EE7F4B"><span data-ovtx="p2.price">$198.000</span></strong><s style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 15px; color: #5F5B58"><span data-ovtx="p2.old">$230.000</span></s></span>
+</span>
+<div data-ovif="b2.on">
+<span style="display: flex; flex-direction: column; gap: 10px; width: 100%; border-top: 1px solid #E4E2E0; padding-top: 18px">
+<span style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">2x OvaBloom 40:1 ($230.000 valor)</strong><span style="font-size: 15px; color: #5F5B58">Mio + D-chiro inositol 40:1 · 2 meses de tratamiento</span></span></span>
+<div data-ovif="sub" hidden><span style="display: flex; gap: 10px; align-items: center; font-size: 15px; color: #5F5B58"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M20 11a8 8 0 10-2.3 5.7M20 5v6h-6"></path></svg>Se envía cada 60 días · Pausa o cancela cuando quieras</span></div>
+<span style="display: flex; align-items: center; gap: 12px; width: 100%"><span style="flex: 1 1 auto; height: 1px; background: #E4E4E4"></span><span style="font-size: 13px; font-family: 'Outfit', sans-serif; letter-spacing: 0.2em; font-weight: 400; color: #EE7F4B">MÁS REGALOS GRATIS</span><span style="flex: 1 1 auto; height: 1px; background: #E4E4E4"></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Envío GRATIS ($25.000)</strong><span style="font-size: 15px; color: #5F5B58">A toda Colombia</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Guía GRATIS: Favorecer tu silueta ($62.000)</strong><span style="font-size: 15px; color: #5F5B58">Guía digital</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Asesoría GRATIS para tu caso x 3 días ($150.000)</strong><span style="font-size: 15px; color: #5F5B58">Por WhatsApp</span></span></span>
+</span>
+</div>
+</button>
+</div>
+
+<div style="position: relative; padding-top: 18px">
+<span style="position: absolute; top: 0; right: 28px; background: #FFFFFF; color: #EE7F4B; border: 1px solid #EE7F4B; border-radius: 999px; padding: 5px 22px; font-family: 'Outfit', sans-serif; font-size: 14px; letter-spacing: 0.08em; font-weight: 400; z-index: 1">Mejor resultado</span>
+<button type="button" aria-pressed="false" style="width: 100%; text-align: left; cursor: pointer; border: 1px solid #D9D9D9; background: #FFFFFF; color: #1A1A1A; border-radius: 18px; padding: 22px 18px 16px; display: flex; flex-direction: column; gap: 11px" data-ovb data-ovclick="pick3" data-ovt-aria-pressed="[[b3.aria]]" data-ovt-style="width: 100%; text-align: left; cursor: pointer; border: 1px solid [[b3.border]]; background: [[b3.bg]]; color: #1A1A1A; border-radius: 18px; padding: 22px 18px 16px; display: flex; flex-direction: column; gap: 11px">
+<span style="display: flex; align-items: center; gap: 12px; width: 100%">
+<span role="img" aria-label="3 frascos de OvaBloom" style="flex: 0 0 96px; height: 80px; border-radius: 12px; background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FCEDE4 60%, #F8DECF 100%); position: relative; overflow: hidden; display: block"><span aria-hidden="true" style="position: absolute; left: 18%; right: 18%; bottom: 7px; height: 8px; border-radius: 50%; background: radial-gradient(closest-side, rgba(120,50,20,0.28), rgba(120,50,20,0))"></span><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="position: absolute; bottom: 9px; left: 27%; transform: translateX(-50%); height: 52px; width: auto; z-index: 1; filter: drop-shadow(0 10px 14px rgba(120,50,20,0.22)) drop-shadow(0 2px 3px rgba(60,30,15,0.15))"><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="position: absolute; bottom: 9px; left: 73%; transform: translateX(-50%); height: 52px; width: auto; z-index: 1; filter: drop-shadow(0 10px 14px rgba(120,50,20,0.22)) drop-shadow(0 2px 3px rgba(60,30,15,0.15))"><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="position: absolute; bottom: 9px; left: 50%; transform: translateX(-50%); height: 64px; width: auto; z-index: 2; filter: drop-shadow(0 10px 14px rgba(120,50,20,0.22)) drop-shadow(0 2px 3px rgba(60,30,15,0.15))"></span>
+<span style="flex: 1 1 auto; display: flex; flex-direction: column; gap: 6px"><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px">3 frascos</strong><span style="font-size: 16.5px"><span data-ovtx="p3.save">Ahorras $78.000</span></span></span>
+<span style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px"><strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 18px; color: #EE7F4B"><span data-ovtx="p3.price">$267.000</span></strong><s style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 15px; color: #5F5B58"><span data-ovtx="p3.old">$345.000</span></s></span>
+</span>
+<div data-ovif="b3.on" hidden>
+<span style="display: flex; flex-direction: column; gap: 10px; width: 100%; border-top: 1px solid #E4E2E0; padding-top: 18px">
+<span style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">3x OvaBloom 40:1 ($345.000 valor)</strong><span style="font-size: 15px; color: #5F5B58">Mio + D-chiro inositol 40:1 · Protocolo completo de 90 días</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Garantía de 90 días</strong><span style="font-size: 15px; color: #5F5B58">Si no ves cambios, te devolvemos tu dinero</span></span></span>
+<div data-ovif="sub" hidden><span style="display: flex; gap: 10px; align-items: center; font-size: 15px; color: #5F5B58"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M20 11a8 8 0 10-2.3 5.7M20 5v6h-6"></path></svg>Se envía cada 90 días · Pausa o cancela cuando quieras</span></div>
+<span style="display: flex; align-items: center; gap: 12px; width: 100%"><span style="flex: 1 1 auto; height: 1px; background: #E4E4E4"></span><span style="font-size: 13px; font-family: 'Outfit', sans-serif; letter-spacing: 0.2em; font-weight: 400; color: #EE7F4B">MÁS REGALOS GRATIS</span><span style="flex: 1 1 auto; height: 1px; background: #E4E4E4"></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Envío GRATIS ($25.000)</strong><span style="font-size: 15px; color: #5F5B58">A toda Colombia</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Guía GRATIS: Favorecer tu silueta ($62.000)</strong><span style="font-size: 15px; color: #5F5B58">Guía digital</span></span></span>
+<span style="display: flex; gap: 10px; align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 26px"><path d="M5 12l5 5L20 7"></path></svg><span style="display: flex; flex-direction: column"><strong style="font-size: 15px; font-weight: 500">Asesoría GRATIS para tu caso x 3 días ($150.000)</strong><span style="font-size: 15px; color: #5F5B58">Por WhatsApp</span></span></span>
+</span>
+</div>
+</button>
+</div>
+
+<button type="button" role="switch" aria-checked="false" style="width: 100%; display: flex; align-items: center; gap: 10px; border: 1px solid #D9D9D9; background: #FFFFFF; border-radius: 16px; padding: 14px 18px; cursor: pointer; text-align: left; color: #1A1A1A" data-ovb data-ovt-aria-checked="[[subAria]]" data-ovclick="toggleSub" data-ovt-style="width: 100%; display: flex; align-items: center; gap: 10px; border: 1px solid [[subRow.border]]; background: [[subRow.bg]]; border-radius: 16px; padding: 14px 18px; cursor: pointer; text-align: left; color: #1A1A1A">
+<span style="flex: 0 0 26px; height: 26px; box-sizing: border-box; border-radius: 6px; border: 1.5px solid #EE7F4B; background: #FFFFFF; color: #FFFFFF; display: flex; align-items: center; justify-content: center" data-ovb data-ovt-style="flex: 0 0 26px; height: 26px; box-sizing: border-box; border-radius: 6px; border: 1.5px solid #EE7F4B; background: [[subRow.box]]; color: #FFFFFF; display: flex; align-items: center; justify-content: center"><div data-ovif="sub" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></div></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><strong style="font-size: 15px; font-weight: 500">Suscríbete y ahorra <span data-ovtx="subExtra">$21.100</span> más en este plan</strong><span style="font-size: 14px; color: #5F5B58">Rebajas de fin de año · Sin permanencia, cancela cuando quieras</span></span>
+</button>
+
+<div style="position: relative; border: 1px solid #1A1A1A; border-radius: 22px; padding: 30px 12px 16px; margin-top: 12px; background: #FFFFFF">
+<span style="position: absolute; top: -20px; left: 28px; background: #F7F4EF; color: #1A1A1A; border: 1px solid #1A1A1A; border-radius: 999px; padding: 7px 24px; font-family: 'Outfit', sans-serif; font-size: 14px; letter-spacing: 0.22em; font-weight: 400">REGALOS DESBLOQUEADOS</span>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; text-align: center">
+<div style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="height: 92px; display: flex; align-items: flex-end; justify-content: center"><svg width="110" height="76" viewBox="0 0 128 88" role="img" aria-label="Envío gratis" style="display: block; filter: drop-shadow(0 8px 10px rgba(110,40,12,0.22))"><g stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round" paint-order="stroke"><path d="M10 22a6 6 0 0 1 6-6h62a6 6 0 0 1 6 6v40H10z" fill="#E4693A"/><path d="M84 32h17c2 0 3.8 1 5 2.6l9 12.4c.6.9 1 2 1 3.1V62H84z" fill="#C9542A"/></g><path d="M89 36h11.5l7 9.5H89z" fill="#FCE6DB"/><rect x="6" y="60" width="114" height="6" rx="3" fill="#B4471F"/><circle cx="32" cy="68" r="10" fill="#2E2A27" stroke="#FFFFFF" stroke-width="3"/><circle cx="32" cy="68" r="3.6" fill="#E9E4DF"/><circle cx="98" cy="68" r="10" fill="#2E2A27" stroke="#FFFFFF" stroke-width="3"/><circle cx="98" cy="68" r="3.6" fill="#E9E4DF"/><text x="47" y="36" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="15" font-style="italic" fill="#FFFFFF" letter-spacing="0.5">ENVÍO</text><text x="47" y="52" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="600" font-size="11.5" font-style="italic" fill="#FFFFFF" letter-spacing="1">GRATIS</text></svg></span>
+<s style="font-size: 15px; color: #5F5B58">$25.000</s>
+<span style="font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 400; color: #EE7F4B">Envío GRATIS</span>
+</div>
+<span style="margin-top: 20px; flex: 0 0 26px; height: 26px; border-radius: 50%; border: 1.5px solid #E4E4E4; color: #EE7F4B; display: flex; align-items: center; justify-content: center" aria-hidden="true">+</span>
+<div style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="height: 92px; display: flex; align-items: flex-end; justify-content: center"><img src="{{ 'ovb-regalo-guia.png' | asset_url }}" alt="Guía Favorecer tu silueta" style="height: 92px; width: auto; display: block"></span>
+<s style="font-size: 15px; color: #5F5B58">$62.000</s>
+<span style="font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 400; color: #EE7F4B">Guía: Favorecer tu silueta</span>
+</div>
+<span style="margin-top: 20px; flex: 0 0 26px; height: 26px; border-radius: 50%; border: 1.5px solid #E4E4E4; color: #EE7F4B; display: flex; align-items: center; justify-content: center" aria-hidden="true">+</span>
+<div style="flex: 1 1 0; display: flex; flex-direction: column; align-items: center; gap: 6px">
+<span style="height: 92px; display: flex; align-items: flex-end; justify-content: center"><span style="position: relative; display: block; width: 72px; height: 90px; border-radius: 12px; overflow: hidden; border: 2px solid #FFFFFF; box-shadow: 0 14px 26px -12px rgba(110,40,12,0.5), 0 2px 6px rgba(110,40,12,0.12); background: linear-gradient(180deg, #F9E3D9 0%, #EE9C78 100%)"><span aria-hidden="true" style="position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 2; background: linear-gradient(90deg, #E9C27A, #F6DFA6, #C99A4B)"></span><img src="{{ 'ovb-regalo-asesoria.jpg' | asset_url }}" alt="Especialista de HerBalance" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block"><span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(238,127,75,0) 60%, rgba(147,54,26,0.28) 100%)"></span></span></span>
+<s style="font-size: 15px; color: #5F5B58">$150.000</s>
+<span style="font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 400; color: #EE7F4B">Asesoría para tu caso x 3 días</span>
+</div>
+</div>
+</div>
+
+<div style="background: #F5F3EF; border-radius: 16px; padding: 11px 14px; font-size: 15px; display: flex; gap: 12px; align-items: center; justify-content: center; text-align: center; flex-wrap: wrap">
+<svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1A1A1A"></circle><path d="M12 6v6l4 2" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path></svg>
+<span>Pide hoy y recíbelo a más tardar el: <strong style="color: #EE7F4B; font-weight: 500; text-decoration: underline"><span data-ovtx="delivery">13 de noviembre</span></strong></span>
+</div>
+
+<button type="button" class="cta" data-ovbuy style="width: 100%; min-height: 62px; border: 1px solid rgba(255,255,255,0.08); border-radius: 36px; background: #93361A; color: #FFFFFF; font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 500; letter-spacing: 0.12em; cursor: pointer; box-shadow: 0 14px 34px -10px rgba(147,54,26,0.55), 0 4px 10px -4px rgba(147,54,26,0.35), inset 0 1px 0 rgba(255,255,255,0.18)">COMPRAR AHORA | <span data-ovtx="total">$198.000</span> <s style="font-weight: 400; opacity: 0.75"><span data-ovtx="totalOld">$230.000</span></s></button>
+
+<p style="margin: 0; text-align: center; font-size: 15px; color: #5F5B58; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 12px"><span>Envío a toda Colombia · Garantía de 90 días</span><div data-ovif="sub" hidden><span>· Cancela cuando quieras</span></div></p>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px">
+<span style="border: 1px solid #E4E2E0; border-radius: 8px; padding: 5px 10px; font-size: 12px; font-weight: 400">Contraentrega</span>
+<span style="border: 1px solid #E4E2E0; border-radius: 8px; padding: 5px 10px; font-size: 12px; font-weight: 400">Tarjeta</span>
+<span style="border: 1px solid #E4E2E0; border-radius: 8px; padding: 5px 10px; font-size: 12px; font-weight: 400">PSE</span>
+<span style="border: 1px solid #E4E2E0; border-radius: 8px; padding: 5px 10px; font-size: 12px; font-weight: 400">Addi</span>
+<span style="border: 1px solid #E4E2E0; border-radius: 8px; padding: 5px 10px; font-size: 12px; font-weight: 400">[Otros medios]</span>
+</div>
+</div>
+
+
+<div style="border-top: 1px solid #E4E2E0; padding: 30px 4px 4px; display: flex; flex-direction: column; gap: 14px">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; font-size: 13px; letter-spacing: 0.22em; font-weight: 700; color: #93361A"><span style="width: 28px; height: 2px; background: #EE7F4B"></span>POR QUÉ SÍ FUNCIONA</span>
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 23px; line-height: 1.15">Por qué las enzimas, quemadores y dietas solo te alivian unas horas</h2>
+<p style="margin: 0; color: #5F5B58">Te dan un alivio pasajero o un resultado temporal. OvaBloom se dirige a la causa interna: combina la ciencia 40:1 con omega 3, vitaminas y minerales <strong style="color: #1A1A1A">para ayudar a equilibrar tu metabolismo</strong>, que tu abdomen se sienta más liviano y tu ropa te vuelva a quedar cómoda de verdad.*</p>
+</div>
+
+<div style="background: #FBF4EE; border: 1px solid rgba(238,127,75,0.16); border-radius: 18px; padding: 12px 14px; display: flex; gap: 12px; align-items: center">
+<div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 1px; padding-right: 12px; border-right: 1px solid rgba(238,127,75,0.25)">
+<svg width="18" height="22" viewBox="0 0 64 76" aria-hidden="true"><defs><linearGradient id="gShield" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6B48F"></stop><stop offset="1" stop-color="#EE7F4B"></stop></linearGradient></defs><path d="M32 6l23 8v18c0 17-10 30-23 38C19 62 9 49 9 32V14z" fill="url(#gShield)"></path><path d="M23 37l7 7 12-13" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<span style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 22px; line-height: 1; color: #EE7F4B">90</span>
+<span style="font-family: 'Outfit', sans-serif; font-size: 9.5px; letter-spacing: 0.18em; font-weight: 500; color: #93361A">DÍAS</span>
+</div>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px">
+<span style="font-family: 'Outfit', sans-serif; font-size: 9.5px; letter-spacing: 0.2em; font-weight: 500; color: #EE7F4B">NUESTRA PROMESA</span>
+<strong style="font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 14.5px; line-height: 1.25; color: #93361A">Sin riesgos: si no lo sientes, te devolvemos tu dinero</strong>
+<p style="margin: 1px 0 0; font-size: 12.5px; line-height: 1.45; color: #5F5B58">Pruébalo 90 días. Si no notas el cambio, te devolvemos el 100%. Sin enredos.</p>
+</div>
+</div>
+
+<div style="padding: 0 4px">
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 60px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 0" data-ovb data-ovclick="a0.toggle" data-ovt-aria-expanded="[[a0.aria]]">Detalles del producto<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="a0.sign">+</span></span></button>
+<div data-ovif="a0.open" hidden><p style="margin: 0; padding: 14px 0; font-size: 15px; color: #5F5B58">OvaBloom es una mezcla en polvo sabor fresa para preparar en agua, con inositol 40:1, omega 3, vitaminas y minerales. Cada frasco trae 300 g, unas 60 porciones. Sin hormonas. Registro sanitario INVIMA RSA-0245-2025.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 60px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 0" data-ovb data-ovclick="a1.toggle" data-ovt-aria-expanded="[[a1.aria]]">Ingredientes<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="a1.sign">+</span></span></button>
+<div data-ovif="a1.open" hidden><div style="padding: 14px 0; font-size: 15px; color: #5F5B58"><p style="margin: 0 0 8px">Mezcla de inositoles en proporción 40:1 (mio-inositol y D-chiro-inositol), omega 3, magnesio, zinc, vitaminas del complejo B (B6 y B12) y vitamina D3.</p><p style="margin: 0">Otros: [excipientes, saborizante, edulcorante y antiaglomerantes, según la etiqueta].</p></div></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 60px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 0" data-ovb data-ovclick="a2.toggle" data-ovt-aria-expanded="[[a2.aria]]">Beneficios<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="a2.sign">+</span></span></button>
+<div data-ovif="a2.open" hidden><p style="margin: 0; padding: 14px 0; font-size: 15px; color: #5F5B58">Apoya tu metabolismo y ayuda a regular la respuesta de tu cuerpo a la insulina con mio y D-chiro inositol 40:1, desde adentro. Favorece una digestión más ligera y ayuda a reducir la sensación de pesadez e hinchazón abdominal. Aporta además omega 3, vitaminas, magnesio y zinc que acompañan el buen funcionamiento de tu organismo. Sin hormonas y con registro INVIMA.*</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 60px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 0" data-ovb data-ovclick="a3.toggle" data-ovt-aria-expanded="[[a3.aria]]">¿Cómo se toma?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="a3.sign">+</span></span></button>
+<div data-ovif="a3.open" hidden><p style="margin: 0; padding: 14px 0; font-size: 15px; color: #5F5B58">Mezcla una cucharada en un vaso de agua fría (400 ml) dos veces al día, no en ayunas. Sabor a fresa, [sin azúcares añadidos: confirmar con etiqueta]. Las primeras señales se sienten en las primeras semanas; el cambio en tu abdomen y tu ropa se afianza hacia el día 45 y se sostiene hacia el día 90.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 60px; background: transparent; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 0" data-ovb data-ovclick="a4.toggle" data-ovt-aria-expanded="[[a4.aria]]">Cambios y devoluciones<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="a4.sign">+</span></span></button>
+<div data-ovif="a4.open" hidden><p style="margin: 0; padding: 0 0 14px; font-size: 15px; color: #5F5B58">Tienes 90 días de garantía desde que recibes tu pedido. Si no notas cambios, escríbenos por WhatsApp y te devolvemos el 100% de tu dinero. [Condiciones: planes aplicables y plazo de reembolso.]</p></div>
+</div>
+
+</div>
+</section>
+
+<section style="background: #F6F0EA; padding: 48px 20px 52px">
+<div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 14px">
+<span style="align-self: flex-start; background: #FFFFFF; color: #93361A; border-radius: 999px; padding: 8px 18px; font-family: 'Outfit', sans-serif; font-size: 11.5px; letter-spacing: 0.2em; font-weight: 500">¿TE SUENA FAMILIAR?</span>
+<div style="text-align: left; display: flex; flex-direction: column; gap: 6px; margin-top: 6px">
+<span style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 19px; color: #5F5B58; text-decoration: line-through; text-decoration-color: #EE7F4B; text-decoration-thickness: 1.5px">Parece falta de esfuerzo.</span>
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: clamp(26px, 6vw, 32px); line-height: 1.15; letter-spacing: -0.02em; color: #1A1A1A">Es un metabolismo <em style="font-family: 'Outfit', sans-serif; font-style: normal; font-weight: 500; color: #D9642F">bloqueado</em>.</h2>
+</div>
+<p style="margin: 0; text-align: left; font-size: 15px; line-height: 1.65; color: #5F5B58; max-width: 560px">No es que comas mal, ni que te falte fuerza de voluntad, ni que tengas que castigarte con dietas imposibles. Tus receptores y tu tránsito interno necesitan apoyo para volver a fluir. Eso se desbloquea desde adentro, <strong style="font-weight: 500; color: #1A1A1A">no aguantando hambre.</strong></p>
+<div style="margin-top: 8px; background: #FFFFFF; border: 1px solid #F3E4DA; border-radius: 24px; padding: 6px 24px; display: flex; flex-direction: column; text-align: left; box-shadow: 0 1px 2px rgba(60,30,15,0.04), 0 24px 48px -26px rgba(110,40,12,0.30)">
+<div style="display: flex; gap: 18px; align-items: flex-start; padding: 18px 0">
+<span aria-hidden="true" style="flex: 0 0 46px; height: 46px; border-radius: 50%; background: #FCE6DB; border: none; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; display: block"><path d="M3 9h11a3 3 0 1 0-3-3"></path><path d="M3 14h15a3 3 0 1 1-3 3"></path><path d="M3 19h6"></path></svg></span>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding-top: 3px">
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A">Gases atrapados e inflamación</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F5B58">La presión profunda en el abdomen y la sensación de tener el sistema digestivo estancado.</p>
+</div>
+</div>
+<div style="border-top: 1px solid #F3E7DF; display: flex; gap: 18px; align-items: flex-start; padding: 18px 0">
+<span aria-hidden="true" style="flex: 0 0 46px; height: 46px; border-radius: 50%; background: #FCE6DB; border: none; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; display: block"><rect x="2" y="8" width="20" height="8" rx="2"></rect><path d="M6 8v3M10 8v4M14 8v3M18 8v4"></path></svg></span>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding-top: 3px">
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A">La barriga terca que no cede</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F5B58">El volumen y la pesadez plantados en el abdomen que se resisten a bajar por más que te esfuerces.</p>
+</div>
+</div>
+<div style="border-top: 1px solid #F3E7DF; display: flex; gap: 18px; align-items: flex-start; padding: 18px 0">
+<span aria-hidden="true" style="flex: 0 0 46px; height: 46px; border-radius: 50%; background: #FCE6DB; border: none; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; display: block"><circle cx="12" cy="12" r="2.5"></circle><path d="M8.5 8.5L4 4M4 4h4M4 4v4M15.5 8.5L20 4M20 4h-4M20 4v4M8.5 15.5L4 20M4 20h4M4 20v-4M15.5 15.5L20 20M20 20h-4M20 20v-4"></path></svg></span>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding-top: 3px">
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A">El abdomen que se expande</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F5B58">Al terminar de almorzar o cenar se expande de golpe, se pone duro como un tambor y se tensa en cuestión de minutos.</p>
+</div>
+</div>
+<div style="border-top: 1px solid #F3E7DF; display: flex; gap: 18px; align-items: flex-start; padding: 18px 0">
+<span aria-hidden="true" style="flex: 0 0 46px; height: 46px; border-radius: 50%; background: #FCE6DB; border: none; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; display: block"><ellipse cx="12" cy="10" rx="5.5" ry="7"></ellipse><path d="M12 17v4M8.5 21h7"></path><path d="M9.5 7.5c.6-1 1.5-1.6 2.5-1.8"></path></svg></span>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px; padding-top: 3px">
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A">La incomodidad frente al espejo</h3>
+<p style="margin: 0; font-size: 14.5px; line-height: 1.55; color: #5F5B58">El peso silencioso de no reconocerte ni sentirte cómoda con los cambios de tu propio cuerpo, extrañando la ligereza de antes.</p>
+</div>
+</div>
+</div>
+</div>
+<style>.pvw{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 16px;padding:0 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.pvw::-webkit-scrollbar{display:none}@media (min-width: 700px){.pvw .pvc{flex-basis:46%!important}}</style>
+<div style="max-width: 640px; margin: 32px auto 0; display: flex; flex-direction: column; gap: 10px">
+<div style="position: relative; border-radius: 28px; overflow: hidden; aspect-ratio: 4 / 5; background: #C9B07A">
+<img src="{{ 'ovb-90-dias.jpg' | asset_url }}" alt="Mujer con los ojos cerrados y una sonrisa tranquila bajo la luz del sol" loading="lazy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 60% 18%; display: block">
+<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,18,10,0) 48%, rgba(30,18,10,0.45) 100%), linear-gradient(100deg, rgba(30,18,10,0.5) 0%, rgba(30,18,10,0.15) 45%, rgba(30,18,10,0) 60%)"></span>
+<h2 style="position: absolute; top: 22px; left: 20px; right: 20px; margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: clamp(21px, 5.4vw, 28px); line-height: 1.12; letter-spacing: -0.02em; color: #FFFFFF; text-align: left">Después de 90 días,<br>ellas nos cuentan<br>cosas como…</h2>
+<div class="pvw" style="position: absolute; left: 0; right: 0; bottom: 30px"><div class="pvc" style="flex: 0 0 80%; scroll-snap-align: start; min-width: 0; border-radius: 18px; padding: 14px 16px 12px; background: rgba(36,22,14,0.38); -webkit-backdrop-filter: blur(16px) saturate(1.1); backdrop-filter: blur(16px) saturate(1.1); border: 1px solid rgba(255,255,255,0.16); color: #FFFFFF; display: flex; flex-direction: column; gap: 5px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: block"><circle cx="12" cy="10" r="6.5"></circle><path d="M12 16.5v1.5M10.5 18h3M12 18c0 1.5-1 2.5-2 3"></path></svg>
+<h3 style="margin: 4px 0 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.25; color: #FFFFFF">El fin del efecto globo</h3>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,0.9)">Se acabó terminar de almorzar con el abdomen duro como un tambor.</p>
+<span style="margin-top: 2px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.2); font-family: 'Outfit', sans-serif; font-size: 11.5px; letter-spacing: 0.02em; color: rgba(255,255,255,0.75)">96% dejó de sentir su abdomen inflamado</span>
+</div><div class="pvc" style="flex: 0 0 80%; scroll-snap-align: start; min-width: 0; border-radius: 18px; padding: 14px 16px 12px; background: rgba(36,22,14,0.38); -webkit-backdrop-filter: blur(16px) saturate(1.1); backdrop-filter: blur(16px) saturate(1.1); border: 1px solid rgba(255,255,255,0.16); color: #FFFFFF; display: flex; flex-direction: column; gap: 5px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: block"><path d="M7 4c-2 4-2 12 0 16M17 4c2 4 2 12 0 16"></path><path d="M10 12h4M12 10l2 2-2 2"></path></svg>
+<h3 style="margin: 4px 0 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.25; color: #FFFFFF">La barriga terca por fin cede</h3>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,0.9)">El metabolismo se destraba desde la raíz, no por pasar hambre.</p>
+<span style="margin-top: 2px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.2); font-family: 'Outfit', sans-serif; font-size: 11.5px; letter-spacing: 0.02em; color: rgba(255,255,255,0.75)">90% notó que su abdomen empezó a ceder</span>
+</div><div class="pvc" style="flex: 0 0 80%; scroll-snap-align: start; min-width: 0; border-radius: 18px; padding: 14px 16px 12px; background: rgba(36,22,14,0.38); -webkit-backdrop-filter: blur(16px) saturate(1.1); backdrop-filter: blur(16px) saturate(1.1); border: 1px solid rgba(255,255,255,0.16); color: #FFFFFF; display: flex; flex-direction: column; gap: 5px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: block"><path d="M3 9h11a3 3 0 1 0-3-3"></path><path d="M3 14h15a3 3 0 1 1-3 3"></path><path d="M3 19h6"></path></svg>
+<h3 style="margin: 4px 0 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.25; color: #FFFFFF">Tardes sin gases ni presiones</h3>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,0.9)">Se fueron las burbujas atrapadas y vuelve la ligereza que extrañabas.</p>
+<span style="margin-top: 2px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.2); font-family: 'Outfit', sans-serif; font-size: 11.5px; letter-spacing: 0.02em; color: rgba(255,255,255,0.75)">95% sintió su digestión más tranquila</span>
+</div><div class="pvc" style="flex: 0 0 80%; scroll-snap-align: start; min-width: 0; border-radius: 18px; padding: 14px 16px 12px; background: rgba(36,22,14,0.38); -webkit-backdrop-filter: blur(16px) saturate(1.1); backdrop-filter: blur(16px) saturate(1.1); border: 1px solid rgba(255,255,255,0.16); color: #FFFFFF; display: flex; flex-direction: column; gap: 5px">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: block"><path d="M12 20s-7-4.3-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.7-7 10-7 10z"></path></svg>
+<h3 style="margin: 4px 0 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.25; color: #FFFFFF">Cómoda en tu piel otra vez</h3>
+<p style="margin: 0; font-size: 13.5px; line-height: 1.45; color: rgba(255,255,255,0.9)">Abrochas el pantalón sin disimular y recuperas la confianza frente al espejo.</p>
+<span style="margin-top: 2px; padding-top: 7px; border-top: 1px solid rgba(255,255,255,0.2); font-family: 'Outfit', sans-serif; font-size: 11.5px; letter-spacing: 0.02em; color: rgba(255,255,255,0.75)">98% lo recomendaría a una amiga</span>
+</div></div>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 13px; display: flex; justify-content: center; gap: 5px"><span style="width: 16px; height: 5px; border-radius: 3px; background: #FFFFFF"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.5)"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.5)"></span><span style="width: 5px; height: 5px; border-radius: 3px; background: rgba(255,255,255,0.5)"></span></div>
+</div>
+<span style="font-family: 'Outfit', sans-serif; font-size: 12px; color: #5F5B58; text-align: left; padding: 0 4px">Encuesta a 400 clientas después de 12 semanas. Resultados autorreportados; pueden variar.</span>
+</div>
+
+
+</section>
+
+<section style="padding: 36px 20px 40px">
+<div style="max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px">
+<div style="background: #F7E9DE; border-radius: 18px; padding: 12px 14px; display: flex; gap: 12px; align-items: center">
+<img src="{{ 'ovb-scoops.jpg' | asset_url }}" alt="2 scoops de OvaBloom en polvo" style="flex: 0 0 64px; width: 64px; height: 70px; object-fit: contain; mix-blend-mode: multiply; display: block">
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 3px; text-align: left">
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16px; line-height: 1.25; color: #1A1A1A">Cómo se toma:</h2>
+<ul style="margin: 0; padding-left: 16px; font-size: 13px; line-height: 1.45; color: #1A1A1A">
+<li>2 scoops al día: uno después del desayuno y otro en la noche.</li>
+<li>Cada uno en 400 ml de agua. Sabor a fresa.</li>
+</ul>
+</div>
+</div>
+<div style="display: flex; gap: 10px; align-items: center; height: 132px">
+<div style="flex: 1.6 1 0; min-width: 0; height: 100%; border-radius: 16px; overflow: hidden; background: #EDE5DE"><img src="{{ 'ovb-vaso.jpg' | asset_url }}" alt="Vaso de OvaBloom con hielo, sabor a fresa" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 45% 55%; display: block"></div>
+<div style="flex: 0 0 132px; height: 132px; border-radius: 50%; overflow: hidden; background: #E9E6E3"><img src="{{ 'ovb-preparacion.png' | asset_url }}" alt="Mano agregando un scoop de OvaBloom a un vaso de agua" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); display: block"></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1160px; margin: 0 auto; padding: 56px 20px; display: flex; flex-direction: column; gap: 22px; background: #F5F2EE; box-shadow: 0 0 0 100vmax #F5F2EE; clip-path: inset(0 -100vmax)">
+<div style="text-align: left; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 30px; line-height: 1.15">De qué se encarga cada uno</h2>
+<p style="margin: 0; color: #5F5B58">Tu cuerpo usa dos tipos de inositol en una proporción de 40 a 1. OvaBloom respeta esa misma relación.</p>
+</div>
+<div style="background: #FBF1EA; border-radius: 24px; padding: 22px 16px 18px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: baseline; gap: 12px; padding: 0 4px">
+<span style="font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 34px; line-height: 1; color: #EE7F4B">40<span style="color: #93361A">:</span>1</span>
+<span style="font-family: 'Outfit', sans-serif; font-size: 11px; letter-spacing: 0.2em; font-weight: 500; color: #93361A">EL CORAZÓN DE LA FÓRMULA</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px"><div style="background: #FFFFFF; border: 1px solid #F0E0D6; border-radius: 20px; padding: 14px; display: flex; gap: 14px; align-items: flex-start">
+<div style="flex: 0 0 92px; height: 92px; border-radius: 14px; overflow: hidden; background: #F5E6DC"><img src="{{ 'ovb-ing-mio.jpg' | asset_url }}" alt="Mio-inositol en polvo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block"></div>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<span style="align-self: flex-start; background: #FCE6DB; color: #93361A; border-radius: 999px; padding: 3px 10px; font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.18em; font-weight: 500">40 PARTES</span>
+<h3 style="margin: 2px 0 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.25; color: #1A1A1A">Mio-inositol</h3>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #9A8F88">Encontrado en: Naranja, toronja y melón</p>
+<p style="margin: 2px 0 0; font-size: 14px; line-height: 1.55; color: #5F5B58">Ayuda a la insulina a hacer su trabajo dentro de la célula, para que la glucosa se use como energía y no se guarde en tu abdomen.*</p>
+</div>
+</div><div style="background: #FFFFFF; border: 1px solid #F0E0D6; border-radius: 20px; padding: 14px; display: flex; gap: 14px; align-items: flex-start">
+<div style="flex: 0 0 92px; height: 92px; border-radius: 14px; overflow: hidden; background: #F5E6DC"><img src="{{ 'ovb-ing-dchiro.jpg' | asset_url }}" alt="D-chiro-inositol en polvo" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; display: block"></div>
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<span style="align-self: flex-start; background: #FCE6DB; color: #93361A; border-radius: 999px; padding: 3px 10px; font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.18em; font-weight: 500">1 PARTE</span>
+<h3 style="margin: 2px 0 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.25; color: #1A1A1A">D-chiro-inositol</h3>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #9A8F88">Encontrado en: Trigo sarraceno (alforfón) y algarroba</p>
+<p style="margin: 2px 0 0; font-size: 14px; line-height: 1.55; color: #5F5B58">Completa al mio en la proporción exacta que tu cuerpo usa y le ayuda a recuperar su respuesta natural a la insulina.*</p>
+</div>
+</div></div>
+</div>
+<div style="overflow-x: auto; padding: 14px 14px 52px; margin: 0 -14px -36px">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(240px, 1fr)); gap: 22px">
+<div class="flt" style="background: #FFFFFF; border: 1px solid rgba(60,30,15,0.05); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(60,30,15,0.06), 0 22px 44px -14px rgba(60,30,15,0.22)">
+<div style="height: 170px; overflow: hidden; background: #F5E6DC"><img src="{{ 'ovb-ing-magnesio.jpg' | asset_url }}" alt="Fuentes de magnesio" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; display: block"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 16px; align-items: center"><span aria-hidden="true" style="flex: 0 0 52px; height: 52px; border-radius: 14px; background: #ECE8F6; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6B5BB5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"></path></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2">Magnesio</h3><span style="font-size: 11px; letter-spacing: 0.14em; color: #9A948F">QUELATO</span></span></div>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A; margin-top: 6px">ENCONTRADO EN</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Espinaca, acelga y semillas de calabaza</p>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A">BENEFICIOS</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Apoya la función de los músculos de tu digestión y le ayuda a tu cuerpo a mover la comida sin esa pesadez de globo.*</p>
+</div>
+</div>
+<div class="flt" style="background: #FFFFFF; border: 1px solid rgba(60,30,15,0.05); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(60,30,15,0.06), 0 22px 44px -14px rgba(60,30,15,0.22)">
+<div style="height: 170px; overflow: hidden; background: #F5E6DC"><img src="{{ 'ovb-ing-d3.jpg' | asset_url }}" alt="Vaso de agua con limón bajo la luz del sol" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 16px; align-items: center"><span aria-hidden="true" style="flex: 0 0 52px; height: 52px; border-radius: 14px; background: #FBEBDA; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D07A22" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2">Vitamina D3</h3><span style="font-size: 11px; letter-spacing: 0.14em; color: #9A948F">COLECALCIFEROL</span></span></div>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A; margin-top: 6px">ENCONTRADO EN</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">La luz del sol: tu piel la fabrica con unos minutos al día</p>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A">BENEFICIOS</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Favorece una respuesta saludable a la insulina y le da al 40:1 la base que necesita para rendir.*</p>
+</div>
+</div>
+<div class="flt" style="background: #FFFFFF; border: 1px solid rgba(60,30,15,0.05); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(60,30,15,0.06), 0 22px 44px -14px rgba(60,30,15,0.22)">
+<div style="height: 170px; overflow: hidden; background: #F5E6DC"><img src="{{ 'ovb-ing-b.jpg' | asset_url }}" alt="Pescado blanco y espinaca" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; display: block"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 16px; align-items: center"><span aria-hidden="true" style="flex: 0 0 52px; height: 52px; border-radius: 14px; background: #F5EEDC; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A9822E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2">Vitaminas B6 y B12</h3><span style="font-size: 11px; letter-spacing: 0.14em; color: #9A948F">COMPLEJO B</span></span></div>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A; margin-top: 6px">ENCONTRADO EN</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Pescado blanco, pechuga de pollo y espinaca</p>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A">BENEFICIOS</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Contribuyen a reducir el cansancio y le ayudan a tu cuerpo a mantener la energía estable, sin el bajón que te manda a picar.*</p>
+</div>
+</div>
+<div class="flt" style="background: #FFFFFF; border: 1px solid rgba(60,30,15,0.05); border-radius: 24px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 2px rgba(60,30,15,0.06), 0 22px 44px -14px rgba(60,30,15,0.22)">
+<div style="height: 170px; overflow: hidden; background: #F5E6DC"><img src="{{ 'ovb-ing-omega.jpg' | asset_url }}" alt="Semillas de linaza y chía" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% 62%; display: block"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; gap: 16px; align-items: center"><span aria-hidden="true" style="flex: 0 0 52px; height: 52px; border-radius: 14px; background: #F3E5EA; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A3A57" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 6 7 6 11a6 6 0 0 1-12 0c0-4 3-7 6-11z"></path></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 20px; line-height: 1.2">Omega 3</h3><span style="font-size: 11px; letter-spacing: 0.14em; color: #9A948F">ÁCIDOS GRASOS ESENCIALES</span></span></div>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A; margin-top: 6px">ENCONTRADO EN</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Semillas de chía y linaza</p>
+<span style="font-size: 11px; letter-spacing: 0.14em; font-weight: 500; color: #1A1A1A">BENEFICIOS</span>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Le da a tu cuerpo el omega 3 esencial que no puede fabricar solo y acompaña tu metabolismo en esta etapa.*</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background: #FFFFFF; border-top: 1px solid #E4E2E0; border-bottom: 1px solid #E4E2E0">
+<div style="max-width: 680px; margin: 0 auto; padding: 44px 20px; display: flex; flex-direction: column; gap: 24px">
+<div style="text-align: left; display: flex; flex-direction: column; gap: 6px">
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 26px; line-height: 1.15; letter-spacing: -0.01em">Tu transformación en 4 etapas</h2>
+<p style="margin: 0; font-size: 14.5px; color: #5F5B58">Lo que vas a sentir semana a semana, y qué está trabajando por dentro.*</p>
+</div>
+<div data-tl="1" style="position: relative; display: flex; flex-direction: column; gap: 34px; padding-left: 6px">
+<div aria-hidden="true" style="position: absolute; left: 6px; top: 20px; height: 0px; width: 1.5px; background: #E7DDD6" data-ovb data-ovt-style="position: absolute; left: 6px; top: [[tl.top]]; height: [[tl.len]]; width: 1.5px; background: #E7DDD6"></div>
+<div aria-hidden="true" style="position: absolute; left: 6px; top: 20px; height: 0px; width: 1.5px; background: #93361A" data-ovb data-ovt-style="position: absolute; left: 6px; top: [[tl.top]]; height: [[tl.fill]]; width: 1.5px; background: #93361A"></div>
+<div style="position: relative; padding-left: 30px; opacity: 1; transition: opacity 0.4s" data-ovb data-ovt-style="position: relative; padding-left: 30px; opacity: [[c1.op]]; transition: opacity 0.4s">
+<span data-step="1" aria-hidden="true" style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: #93361A; transform: translateX(-5px); z-index: 1; transition: background 0.3s" data-ovb data-ovt-style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: [[c1.dot]]; transform: translateX(-5px); z-index: 1; transition: background 0.3s"></span>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="flex: 0 0 auto; background: #93361A; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s" data-ovb data-ovt-style="flex: 0 0 auto; background: [[c1.pill]]; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s">Semanas 1–2</span>
+<h3 style="margin: 0; flex: 1 1 180px; min-width: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.3; color: #1A1A1A">Más liviana después de comer</h3>
+</div>
+<p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #5F5B58">La tensión de después del almuerzo empieza a ceder. El abdomen se siente menos tenso y las tardes, más tranquilas.</p>
+</div>
+<div style="position: relative; padding-left: 30px; opacity: 0.38; transition: opacity 0.4s" data-ovb data-ovt-style="position: relative; padding-left: 30px; opacity: [[c2.op]]; transition: opacity 0.4s">
+<span data-step="2" aria-hidden="true" style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: #D9CDC4; transform: translateX(-5px); z-index: 1; transition: background 0.3s" data-ovb data-ovt-style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: [[c2.dot]]; transform: translateX(-5px); z-index: 1; transition: background 0.3s"></span>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="flex: 0 0 auto; background: #C9B8AC; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s" data-ovb data-ovt-style="flex: 0 0 auto; background: [[c2.pill]]; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s">Semanas 3–6</span>
+<h3 style="margin: 0; flex: 1 1 180px; min-width: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.3; color: #1A1A1A">Adiós a la pesadez y la inflamación</h3>
+</div>
+<p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #5F5B58">Tu cuerpo responde mejor a la insulina, el tránsito intestinal retoma su ritmo natural y deja de priorizar el almacenamiento en el abdomen.</p>
+</div>
+<div style="position: relative; padding-left: 30px; opacity: 0.38; transition: opacity 0.4s" data-ovb data-ovt-style="position: relative; padding-left: 30px; opacity: [[c3.op]]; transition: opacity 0.4s">
+<span data-step="3" aria-hidden="true" style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: #D9CDC4; transform: translateX(-5px); z-index: 1; transition: background 0.3s" data-ovb data-ovt-style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: [[c3.dot]]; transform: translateX(-5px); z-index: 1; transition: background 0.3s"></span>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="flex: 0 0 auto; background: #C9B8AC; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s" data-ovb data-ovt-style="flex: 0 0 auto; background: [[c3.pill]]; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s">Semanas 7–9</span>
+<h3 style="margin: 0; flex: 1 1 180px; min-width: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.3; color: #1A1A1A">El metabolismo, el intestino y la barriga empiezan a ceder</h3>
+</div>
+<p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #5F5B58">La fórmula 40:1 desbloquea tu resistencia metabólica. La inflamación profunda cede, los gases atrapados se van y la barriga terca empieza a retroceder.</p>
+</div>
+<div style="position: relative; padding-left: 30px; opacity: 0.38; transition: opacity 0.4s" data-ovb data-ovt-style="position: relative; padding-left: 30px; opacity: [[c4.op]]; transition: opacity 0.4s">
+<span data-step="4" aria-hidden="true" style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: #D9CDC4; transform: translateX(-5px); z-index: 1; transition: background 0.3s" data-ovb data-ovt-style="position: absolute; left: 0; top: 12px; width: 11px; height: 11px; border-radius: 50%; background: [[c4.dot]]; transform: translateX(-5px); z-index: 1; transition: background 0.3s"></span>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="flex: 0 0 auto; background: #C9B8AC; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s" data-ovb data-ovt-style="flex: 0 0 auto; background: [[c4.pill]]; color: #FFFFFF; border-radius: 999px; padding: 7px 14px; font-family: 'Outfit', sans-serif; font-size: 13px; font-weight: 500; transition: background 0.3s">Semanas 10–12</span>
+<h3 style="margin: 0; flex: 1 1 180px; min-width: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 17px; line-height: 1.3; color: #1A1A1A">Vuelves a ponerte lo que quieras y a estar en total libertad</h3>
+</div>
+<p style="margin: 10px 0 0; font-size: 14.5px; line-height: 1.6; color: #5F5B58">Abdomen más liviano y deshinchado, digestión tranquila y tu ropa de siempre otra vez. El cambio se consolida desde la raíz.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="background: #7A2C14; color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 56px 20px; display: flex; flex-direction: column; gap: 26px">
+<div style="text-align: left; display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
+<span style="background: rgba(0,0,0,0.25); border-radius: 999px; padding: 10px 24px; font-size: 13px; letter-spacing: 0.2em; font-weight: 700">EN SUS PROPIAS PALABRAS</span>
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: 32px; line-height: 1.15; max-width: 760px">Mujeres entre 38 y 55 que recuperaron su <em style="font-style: normal; font-weight: 500; color: #FFC9AE">liviandad, confianza y comodidad</em></h2>
+</div>
+<div style="overflow-x: auto; padding-bottom: 8px">
+<div style="display: grid; grid-template-columns: repeat(6, minmax(280px, 1fr)); gap: 18px">
+<div style="border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; overflow: hidden; background: rgba(0,0,0,0.18)">
+<div style="height: 220px; position: relative; overflow: hidden"><img src="{{ 'ovb-resena-elena.jpg' | asset_url }}" alt="Elena con dos frascos de OvaBloom" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 30% 62%; display: block"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 18px; font-family: 'Outfit', sans-serif; font-weight: 500">Elena M.</strong>
+<span style="align-self: flex-start; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 4px 12px; font-size: 11px; letter-spacing: 0.16em; font-weight: 700">GASES Y PESADEZ</span>
+<p style="margin: 0; color: #F5D6C8">"Ese momento de llegar al carro o sentarte a trabajar y tener que desabrocharte el botón porque no aguantas la presión de los gases... Se acabó. Sentir el abdomen liviano no tiene precio, gracias a este producto."</p>
+</div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; overflow: hidden; background: rgba(0,0,0,0.18)">
+<div style="height: 220px; position: relative; overflow: hidden"><img src="{{ 'ovb-resena-mariana.jpg' | asset_url }}" alt="Mariana tomando su bebida de OvaBloom" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 35% 52%; display: block"></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 18px; font-family: 'Outfit', sans-serif; font-weight: 500">Mariana G.</strong>
+<span style="align-self: flex-start; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 4px 12px; font-size: 11px; letter-spacing: 0.16em; font-weight: 700">GASES Y PESADEZ</span>
+<p style="margin: 0; color: #F5D6C8">"Vivía con retortijones por acumulación de gases, con una presión horrible que hasta me llegaba a doler. Ya llevo dos meses con OvaBloom, los gases por fin fluyen y siento el abdomen libre de esa presión tan horrible."</p>
+</div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; overflow: hidden; background: rgba(0,0,0,0.18)">
+<div style="height: 220px; position: relative; overflow: hidden"><img src="{{ 'ovb-resena-muestra-1.jpg' | asset_url }}" alt="Foto de muestra" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block"><span style="position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.92); color: #93361A; border-radius: 999px; padding: 5px 12px; font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.16em; font-weight: 500">MUESTRA · REEMPLAZAR POR FOTO REAL</span></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 18px; font-family: 'Outfit', sans-serif; font-weight: 500">Lucía P.</strong>
+<span style="align-self: flex-start; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 4px 12px; font-size: 11px; letter-spacing: 0.16em; font-weight: 700">BARRIGA TERCA</span>
+<p style="margin: 0; color: #F5D6C8">"Lo noté al mirarme al espejo: la barriga dejó de sentirse abultada hacia adelante. El abdomen está mucho más deshinchado, liviano y ahora me empiezo a sentir más cómoda con mi silueta."</p>
+</div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; overflow: hidden; background: rgba(0,0,0,0.18)">
+<div style="height: 220px; position: relative; overflow: hidden"><img src="{{ 'ovb-resena-muestra-2.jpg' | asset_url }}" alt="Foto de muestra" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block"><span style="position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.92); color: #93361A; border-radius: 999px; padding: 5px 12px; font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.16em; font-weight: 500">MUESTRA · REEMPLAZAR POR FOTO REAL</span></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 18px; font-family: 'Outfit', sans-serif; font-weight: 500">Claudia R.</strong>
+<span style="align-self: flex-start; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 4px 12px; font-size: 11px; letter-spacing: 0.16em; font-weight: 700">HINCHAZÓN</span>
+<p style="margin: 0; color: #F5D6C8">"Comiera lo que comiera, al terminar de almorzar el abdomen se me ponía duro, tenso e hinchado como un tambor, como si nada se moviera allá adentro. Con OvaBloom esto ha cambiado definitivamente, es espectacular."</p>
+</div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; overflow: hidden; background: rgba(0,0,0,0.18)">
+<div style="height: 220px; position: relative; overflow: hidden"><img src="{{ 'ovb-resena-muestra-3.jpg' | asset_url }}" alt="Foto de muestra" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 45% 45%; display: block"><span style="position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.92); color: #93361A; border-radius: 999px; padding: 5px 12px; font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.16em; font-weight: 500">MUESTRA · REEMPLAZAR POR FOTO REAL</span></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 18px; font-family: 'Outfit', sans-serif; font-weight: 500">Diana L.</strong>
+<span style="align-self: flex-start; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 4px 12px; font-size: 11px; letter-spacing: 0.16em; font-weight: 700">BARRIGA TERCA</span>
+<p style="margin: 0; color: #F5D6C8">"Lo que más me frustraba era la barriga que se me desató. Los médicos me decían que era la entrada a mis 40 y me resignaba a eso. Por suerte encontré OvaBloom, gracias."</p>
+</div>
+</div>
+<div style="border: 1px solid rgba(255,255,255,0.18); border-radius: 24px; overflow: hidden; background: rgba(0,0,0,0.18)">
+<div style="height: 220px; position: relative; overflow: hidden"><img src="{{ 'ovb-resena-muestra-4.jpg' | asset_url }}" alt="Foto de muestra" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: 72% 86%; display: block; transform: scale(1.35); transform-origin: 72% 86%"><span style="position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.92); color: #93361A; border-radius: 999px; padding: 5px 12px; font-family: 'Outfit', sans-serif; font-size: 10px; letter-spacing: 0.16em; font-weight: 500">MUESTRA · REEMPLAZAR POR FOTO REAL</span></div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<strong style="font-size: 18px; font-family: 'Outfit', sans-serif; font-weight: 500">Liliana T.</strong>
+<span style="align-self: flex-start; border: 1px solid rgba(255,255,255,0.35); border-radius: 999px; padding: 4px 12px; font-size: 11px; letter-spacing: 0.16em; font-weight: 700">GASES Y PESADEZ</span>
+<p style="margin: 0; color: #F5D6C8">"Los gases que se quedaban atrapados generaban un caos en mis tardes, pero OvaBloom ha sido mi compañero."</p>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: flex-start; align-items: baseline; gap: 10px 28px">
+<span style="font-size: 16.5px"><span role="img" aria-label="4.9 de 5 estrellas" style="display: inline-flex; letter-spacing: 3px; color: #FFC9AE">★★★★<span style="position: relative; display: inline-block; letter-spacing: 0; color: rgba(255,255,255,0.28)">★<span aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 72%; overflow: hidden; white-space: nowrap; color: #FFC9AE">★</span></span></span> <strong style="font-size: 27px; font-family: 'Outfit', sans-serif; font-weight: 400; color: #FFC9AE">4.9</strong> de 5</span>
+<span style="font-size: 16.5px"><strong style="font-size: 27px; font-family: 'Outfit', sans-serif; font-weight: 400; color: #FFC9AE">2.800</strong> reseñas verificadas</span>
+</div>
+
+</div>
+</section>
+
+<section style="max-width: 760px; margin: 0 auto; padding: 48px 20px; display: flex; flex-direction: column; gap: 16px; background: #F5F2EE; box-shadow: 0 0 0 100vmax #F5F2EE; clip-path: inset(0 -100vmax)">
+<div style="text-align: left; display: flex; flex-direction: column; gap: 10px; align-items: flex-start">
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 400; font-size: clamp(24px, 5.6vw, 28px); line-height: 1.15">No todos los inositoles son iguales</h2>
+</div>
+<div class="flt-panel" style="background: #FFFFFF; border: 1px solid #E4E2E0; border-radius: 20px; padding: 8px 10px">
+<table style="width: 100%; table-layout: fixed; border-collapse: separate; border-spacing: 0; font-size: 13.5px; line-height: 1.4">
+<thead>
+<tr>
+<th style="text-align: left; padding: 10px 6px; border-bottom: 1px solid #E4E2E0"></th>
+<th style="width: 27%; padding: 12px 4px 10px; background: #FCE6DB; border-radius: 14px 14px 0 0; border-bottom: 1px solid #E4E2E0; vertical-align: bottom"><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="Frasco de OvaBloom" style="height: 46px; width: auto; display: block; margin: 0 auto 6px; filter: drop-shadow(0 6px 8px rgba(120,50,20,0.2))"><span style="font-family: 'Outfit', sans-serif; font-size: 10.5px; letter-spacing: 0.1em; font-weight: 500; color: #93361A">OVABLOOM 40:1</span></th>
+<th style="width: 27%; padding: 12px 4px 10px; border-bottom: 1px solid #E4E2E0; vertical-align: bottom; font-family: 'Outfit', sans-serif; font-size: 10.5px; letter-spacing: 0.08em; font-weight: 500; line-height: 1.35; color: #5F5B58">OTRO INOSITOL</th>
+</tr>
+</thead>
+<tbody>
+<tr><td style="padding: 12px 6px; border-bottom: 1px solid #E4E2E0">Te calma la inflamación de hoy</td><td style="text-align: center; background: #FCE6DB; border-bottom: 1px solid #E4E2E0"><span style="font-family: 'Outfit', sans-serif; font-size: 11.5px; font-weight: 500; line-height: 1.25; color: #93361A">Con el tiempo</span></td><td style="text-align: center; border-bottom: 1px solid #E4E2E0"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #C9C3BE; color: #8A847F; align-items: center; justify-content: center" role="img" aria-label="Sí"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span></td></tr>
+<tr><td style="padding: 12px 6px; border-bottom: 1px solid #E4E2E0">Trata la raíz del síntoma por la caída de estrógenos</td><td style="text-align: center; background: #FCE6DB; border-bottom: 1px solid #E4E2E0"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; box-shadow: 0 4px 10px -4px rgba(222,106,53,0.55); align-items: center; justify-content: center" role="img" aria-label="Sí"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span></td><td style="text-align: center; border-bottom: 1px solid #E4E2E0; color: #5F5B58"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #E4E2E0; color: #A39D98; align-items: center; justify-content: center" role="img" aria-label="No"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></td></tr>
+<tr><td style="padding: 12px 6px; border-bottom: 1px solid #E4E2E0">Desbloquea el tránsito normal del intestino</td><td style="text-align: center; background: #FCE6DB; border-bottom: 1px solid #E4E2E0"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; box-shadow: 0 4px 10px -4px rgba(222,106,53,0.55); align-items: center; justify-content: center" role="img" aria-label="Sí"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span></td><td style="text-align: center; border-bottom: 1px solid #E4E2E0; color: #5F5B58"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #E4E2E0; color: #A39D98; align-items: center; justify-content: center" role="img" aria-label="No"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></td></tr>
+<tr><td style="padding: 12px 6px; border-bottom: 1px solid #E4E2E0">Neutraliza el almacenamiento terco en el abdomen</td><td style="text-align: center; background: #FCE6DB; border-bottom: 1px solid #E4E2E0"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; box-shadow: 0 4px 10px -4px rgba(222,106,53,0.55); align-items: center; justify-content: center" role="img" aria-label="Sí"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span></td><td style="text-align: center; border-bottom: 1px solid #E4E2E0; color: #5F5B58"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #E4E2E0; color: #A39D98; align-items: center; justify-content: center" role="img" aria-label="No"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></td></tr>
+<tr><td style="padding: 12px 6px; border-bottom: 1px solid #E4E2E0">Baja la degeneración de los tejidos intestinales</td><td style="text-align: center; background: #FCE6DB; border-bottom: 1px solid #E4E2E0"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; box-shadow: 0 4px 10px -4px rgba(222,106,53,0.55); align-items: center; justify-content: center" role="img" aria-label="Sí"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span></td><td style="text-align: center; border-bottom: 1px solid #E4E2E0"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #E4E2E0; color: #A39D98; align-items: center; justify-content: center" role="img" aria-label="No"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></td></tr>
+<tr><td style="padding: 12px 6px">Favorece tu microbiota intestinal</td><td style="text-align: center; background: #FCE6DB; border-radius: 0 0 22px 22px; padding-bottom: 6px"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; background: #EE7F4B; color: #FFFFFF; box-shadow: 0 4px 10px -4px rgba(222,106,53,0.55); align-items: center; justify-content: center" role="img" aria-label="Sí"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span></td><td style="text-align: center; color: #5F5B58"><span style="display: inline-flex; width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid #E4E2E0; color: #A39D98; align-items: center; justify-content: center" role="img" aria-label="No"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></span></td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 0; text-align: left; font-family: 'Outfit', sans-serif; font-size: 16px; color: #5F5B58">El inositol solo ayuda. En la proporción correcta, trabaja como tu cuerpo lo necesita.</p>
+</section>
+
+<section style="background: #FFFFFF; border-top: 1px solid #E4E2E0">
+<div style="max-width: 760px; margin: 0 auto; padding: 56px 20px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; text-align: left; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 30px; line-height: 1.1">Lo que todas preguntan antes de pedir</h2>
+<div style="border: 1px solid #E4E2E0; border-radius: 24px; padding: 6px 24px; background: #FFFFFF">
+<button type="button" aria-expanded="true" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f0.toggle" data-ovt-aria-expanded="[[f0.aria]]">¿Tengo que hacer dieta o dejar de comer para que funcione?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f0.sign">−</span></span></button>
+<div data-ovif="f0.open"><p style="margin: 0; padding: 14px 0; color: #5F5B58">No. OvaBloom no te pide dietas extremas ni contar calorías. Trabaja sobre tu insulina, que es lo que hace que tu cuerpo guarde en el abdomen aunque comas bien. Comer balanceado suma, pero no tienes que vivir a dieta.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f1.toggle" data-ovt-aria-expanded="[[f1.aria]]">No tengo diagnóstico de resistencia a la insulina. ¿Igual me sirve?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f1.sign">+</span></span></button>
+<div data-ovif="f1.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Sí. No necesitas un diagnóstico. En la perimenopausia, la caída de los estrógenos hace que el cuerpo responda peor a la insulina, y la barriga que no baja o la pesadez de la tarde suelen ser las primeras señales. Si te identificas con eso, OvaBloom está pensado para ti.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f2.toggle" data-ovt-aria-expanded="[[f2.aria]]">Ya probé de todo y nada me funcionó. ¿Por qué esto sí?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f2.sign">+</span></span></button>
+<div data-ovif="f2.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Porque lo que probaste trabajaba sobre el síntoma: la faja aprieta, el antigases desinfla un rato, la dieta te deja con hambre. OvaBloom apoya la raíz, tu respuesta a la insulina, con la proporción 40:1 que tu cuerpo usa de forma natural. Y no lo haces sola: te acompañamos por WhatsApp.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f3.toggle" data-ovt-aria-expanded="[[f3.aria]]">¿Tiene hormonas? ¿Lo puedo tomar si estoy en terapia hormonal?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f3.sign">+</span></span></button>
+<div data-ovif="f3.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">No tiene hormonas. Trabaja una pieza distinta: la parte metabólica que nadie te está cuidando. Si estás en terapia hormonal, coméntaselo a tu ginecólogo antes de empezar.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f4.toggle" data-ovt-aria-expanded="[[f4.aria]]">¿Me puede inflar al principio?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f4.sign">+</span></span></button>
+<div data-ovif="f4.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Algunas mujeres sienten el estómago más activo los primeros días, mientras el cuerpo se adapta. Por eso te enviamos un plan de arranque: los primeros 7 días empiezas con media porción y la tomas con comida. Si tienes dudas, nos escribes.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f5.toggle" data-ovt-aria-expanded="[[f5.aria]]">¿En cuánto tiempo voy a notar algo?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f5.sign">+</span></span></button>
+<div data-ovif="f5.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Las primeras semanas se suele sentir menos pesadez después de comer. Hacia el día 45, el cambio se nota en cómo te queda la ropa, y hacia el día 90 se consolida. Es un proceso: por eso el plan de 3 meses es el que mejor resultado da.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f6.toggle" data-ovt-aria-expanded="[[f6.aria]]">Estoy tomando medicamentos. ¿Puedo tomarlo?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f6.sign">+</span></span></button>
+<div data-ovif="f6.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Sí, en la gran mayoría de los casos puedes tomarlo, ya que OvaBloom es una fórmula a base de inositol (40:1), omega 3, magnesio y nutrientes esenciales que actúan sobre el metabolismo y la digestión, sin hormonas sintéticas. Sin embargo, si estás tomando medicamentos recetados para condiciones específicas (como tratamientos para la tiroides, la resistencia a la insulina o anticoagulantes), siempre recomendamos consultar con tu médico de confianza o especialista.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f7.toggle" data-ovt-aria-expanded="[[f7.aria]]">¿Cómo se paga?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f7.sign">+</span></span></button>
+<div data-ovif="f7.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Como prefieras: en línea con tarjeta, PSE o Addi, o contraentrega, pagas cuando lo recibes en tu casa. Envío gratis a toda Colombia.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; border-bottom: 1px solid #E4E2E0; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f8.toggle" data-ovt-aria-expanded="[[f8.aria]]">Si me suscribo, ¿puedo cancelar en cualquier momento?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f8.sign">+</span></span></button>
+<div data-ovif="f8.open" hidden><p style="margin: 0; padding: 14px 0; color: #5F5B58">Sí, cuando quieras y sin permanencia. Puedes pausar, cambiar o cancelar tu suscripción con un mensaje por WhatsApp.</p></div>
+<button type="button" aria-expanded="false" style="width: 100%; min-height: 64px; background: transparent; border: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; cursor: pointer; color: #1A1A1A; font-size: 15.5px; font-weight: 700; text-align: left; padding: 10px 0" data-ovb data-ovclick="f9.toggle" data-ovt-aria-expanded="[[f9.aria]]">¿Y si no siento nada?<span style="font-size: 19px; font-weight: 400; color: #5F5B58"><span data-ovtx="f9.sign">+</span></span></button>
+<div data-ovif="f9.open" hidden><p style="margin: 0; padding: 0 0 14px; color: #5F5B58">Tienes 90 días de garantía. Si tu abdomen no se siente más liviano y no ves cambios en cómo te queda la ropa, te devolvemos el 100% de tu dinero. Sin enredos.</p></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1240px; margin: 0 auto; padding: 52px 20px 56px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<h2 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 300; font-size: 28px">Lo que dicen ellas</h2>
+<p style="margin: 0; font-size: 15px; color: #5F5B58">Reseñas destacadas · 4.9 de 5 en 2.800 reseñas</p>
+</div>
+<a href="#" style="font-size: 15px; color: #1A1A1A; text-underline-offset: 4px">Ver todas las reseñas</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px">
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="5.0 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★★</span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">5.0</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Lorena C.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">Un producto estupendo</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Tengo 45 años y es un producto estupendo, sí cumple con sus beneficios.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="4.9 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★<span style="position: relative; display: inline-block; letter-spacing: 0; color: #F3D6C6">★<span aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 72%; overflow: hidden; white-space: nowrap; color: #EE7F4B">★</span></span></span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">4.9</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Beatriz S.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">El pantalón dejó de apretarme</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Llevo ya dos meses con OvaBloom y el pantalón dejó de apretarme en la oficina, ya no me talla el botón… me siento bastante cómoda.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="4.8 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★<span style="position: relative; display: inline-block; letter-spacing: 0; color: #F3D6C6">★<span aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 62%; overflow: hidden; white-space: nowrap; color: #EE7F4B">★</span></span></span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">4.8</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Amanda S.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">Ha sido fantástico el cambio</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Yo llevaba 6 meses con gases que me inflamaban el abdomen, pero decidí comprar este producto hace mes y medio y ha sido fantástico el cambio. Además siento como si la comida sí transitara y no me genera pesadez, y eso que van hasta ahora menos de dos meses.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="5.0 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★★</span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">5.0</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Victoria B.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">Mi barriga por fin empezó a bajar</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Estoy fascinada con este producto… ya llevo más de 3 meses consumiéndolo y mi barriga por fin empezó a bajar. En realidad sí es algo que se puede tratar, no es por la edad.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="4.9 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★<span style="position: relative; display: inline-block; letter-spacing: 0; color: #F3D6C6">★<span aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 72%; overflow: hidden; white-space: nowrap; color: #EE7F4B">★</span></span></span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">4.9</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Rosa R.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">La presión del trabajo se fue</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Esa sensación de presión e inflamación que me daba en el trabajo se fue, estoy muy contenta con este producto.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="5.0 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★★</span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">5.0</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Ana C.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">Mi cuñada también lo probó</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Me lo recomendó mi cuñada porque después de que cumplí 40, cerca a mi menopausia, empecé a sentir mi barriga más inflamada, sentía así como dicen en otros casos, como un tambor… Intenté haciendo ejercicio, haciendo dieta, compré algunos quemadores de grasa, pero fueron meses donde no veía avances. Visité algunos médicos por la EPS y siempre me decían que esos eran síntomas de que se me acercaba la menopausia, pero yo me resignaba a no hacer nada… Mi cuñada ya llevaba dos meses con este producto, me lo recomendó y, al igual que ella, estoy fascinada.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="5.0 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★★</span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">5.0</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Rosalba R.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">Se volvió parte de mi rutina</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Yo llevo 4 meses consumiéndolo, se volvió parte de mi rutina… Estoy suscrita y cada mes me llega uno a la puerta de mi casa. Este producto me devolvió la confianza y la comodidad que había perdido con mi cuerpo.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+<article style="background: #FAF8F6; border: 1px solid #F0ECE8; border-radius: 6px; padding: 26px 24px 22px; display: flex; flex-direction: column; gap: 12px">
+<div role="img" aria-label="4.9 de 5 estrellas" style="display: flex; align-items: center; gap: 8px"><span aria-hidden="true" style="display: inline-flex; font-size: 19px; line-height: 1; letter-spacing: 2px; color: #EE7F4B">★★★★<span style="position: relative; display: inline-block; letter-spacing: 0; color: #F3D6C6">★<span aria-hidden="true" style="position: absolute; left: 0; top: 0; width: 72%; overflow: hidden; white-space: nowrap; color: #EE7F4B">★</span></span></span><span style="font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; color: #1A1A1A">4.9</span></div>
+<p style="margin: 4px 0 0; font-size: 15px; color: #5F5B58"><strong style="font-weight: 600; color: #4A4643">Diana R.</strong></p>
+<h3 style="margin: 0; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 16.5px; line-height: 1.35; color: #1A1A1A; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden">Me he sentido más liviana</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #1A1A1A; max-height: 6.4em; overflow: hidden; -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent); mask-image: linear-gradient(180deg, #000 55%, transparent)">“Llevo apenas tres semanas con este producto y sí me he sentido más liviana… Esperemos a completar el segundo frasco a ver qué sucede, pero hasta el momento me he sentido satisfecha.”</p>
+<div style="margin-top: 6px; background: #FFFFFF; border-left: 3px solid #EE7F4B; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5B58"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EE7F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"></path><path d="M4 9h10a6 6 0 0 1 6 6v4"></path></svg><span style="flex: 1 1 auto">Respuesta de HerBalance</span></div>
+<a href="#" style="align-self: center; margin-top: 4px; font-size: 15px; font-weight: 500; color: #93361A; text-underline-offset: 4px">Leer más</a>
+</article>
+</div>
+<p style="margin: 0; font-size: 13px; color: #5F5B58; text-align: left">Las reseñas se cargan desde la app de reseñas de la tienda: solo reseñas reales y verificadas.</p>
+</section>
+
+{% if section.settings.show_footer %}<footer style="background: #7A2C14; color: #FFFFFF">
+<div style="max-width: 1160px; margin: 0 auto; padding: 48px 20px 104px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column">
+<a href="#" style="min-height: 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.18); color: #FFC9AE; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 15px; letter-spacing: 0.16em; font-weight: 500">TIENDA<span style="font-weight: 300">+</span></a>
+<a href="#" style="min-height: 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.18); color: #FFC9AE; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 15px; letter-spacing: 0.16em; font-weight: 500">NOSOTRAS<span style="font-weight: 300">+</span></a>
+<a href="#" style="min-height: 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.18); color: #FFC9AE; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 15px; letter-spacing: 0.16em; font-weight: 500">APRENDE<span style="font-weight: 300">+</span></a>
+<a href="#" style="min-height: 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.18); color: #FFC9AE; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 15px; letter-spacing: 0.16em; font-weight: 500">AYUDA<span style="font-weight: 300">+</span></a>
+<a href="#" style="min-height: 56px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.18); color: #FFC9AE; text-decoration: none; font-family: 'Outfit', sans-serif; font-size: 15px; letter-spacing: 0.16em; font-weight: 500">COMUNIDAD HERBALANCE<span style="font-weight: 300">+</span></a>
+</div>
+<div style="display: flex; justify-content: center; padding: 8px 0"><img src="{{ 'ovb-logo.svg' | asset_url }}" alt="herbalance" style="width: 100%; max-width: 820px; height: auto; display: block"></div>
+<p style="margin: 0; text-align: left; font-size: 15px">© 2026 HerBalance · OvaBloom™ · Registro sanitario INVIMA RSA-0245-2025</p>
+<p style="margin: 0; text-align: left; font-size: 14px; color: #F5D6C8"><a href="#" style="color: #FFFFFF">Política de privacidad</a> · <a href="#" style="color: #FFFFFF">Términos y condiciones</a> · <a href="#" style="color: #FFFFFF">Política de devoluciones</a></p>
+<p style="margin: 0; text-align: left; font-size: 14px; color: #F5D6C8">**Regalos sujetos a disponibilidad. La garantía de 90 días aplica según los términos de la política de devoluciones.</p>
+<p style="margin: 0; text-align: left; font-size: 14px; color: #F5D6C8">Contacto: [correo] · WhatsApp [número] · [Ciudad], Colombia</p>
+</div>
+</footer>{% endif %}
+
+<div style="position: sticky; bottom: 0; z-index: 20; background: #FFFFFF; border-top: 1px solid #E4E2E0; box-shadow: 0 -6px 24px rgba(0,0,0,0.06)">
+<div style="max-width: 1160px; margin: 0 auto; padding: 12px 20px; display: flex; align-items: center; justify-content: space-between; gap: 14px">
+<div style="display: flex; align-items: center; gap: 14px; min-width: 0">
+<span style="flex: 0 0 56px; height: 56px; border-radius: 12px; background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FCEDE4 60%, #F8DECF 100%); display: flex; align-items: center; justify-content: center"><img src="{{ 'ovb-frasco.png' | asset_url }}" alt="" style="height: 44px; width: auto; display: block; filter: drop-shadow(0 4px 6px rgba(120,50,20,0.25))"></span>
+<span style="display: flex; flex-direction: column; min-width: 0"><strong style="font-size: 15.5px">OvaBloom</strong><span style="font-size: 15px">Desde <strong>$115.000</strong> <span style="color: #5F5B58">· Ahorra hasta 31%</span></span></span>
+</div>
+<a href="#planes" class="cta" style="flex: 0 0 auto; min-height: 54px; padding: 0 30px; border-radius: 30px; background: #93361A; color: #FFFFFF; text-decoration: none; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 15px; letter-spacing: 0.1em; display: flex; align-items: center; box-shadow: 0 12px 28px -10px rgba(147,54,26,0.55), inset 0 1px 0 rgba(255,255,255,0.18)">ELEGIR MI PLAN</a>
+</div>
+</div>
+
+</div>
+
+</div>
+<script src="{{ 'ovabloom-landing.js' | asset_url }}" defer></script>
+{% schema %}
+{
+  "name": "OvaBloom Landing",
+  "tag": "section",
+  "class": "ovb-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Compra (IDs de variante)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Pega aquí el ID numérico de la variante de cada plan. Lo encuentras en Productos → OvaBloom → variante → la URL termina en /variants/ID."
+    },
+    {
+      "type": "text",
+      "id": "variant_1",
+      "label": "Variante: 1 frasco"
+    },
+    {
+      "type": "text",
+      "id": "variant_2",
+      "label": "Variante: 2 frascos"
+    },
+    {
+      "type": "text",
+      "id": "variant_3",
+      "label": "Variante: 3 frascos"
+    },
+    {
+      "type": "header",
+      "content": "Suscripción (opcional)"
+    },
+    {
+      "type": "paragraph",
+      "content": "Si usan una app de suscripciones, pega el ID del plan de venta (selling plan) de cada opción. Si lo dejan vacío, se compra como compra única."
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_1",
+      "label": "Selling plan: 1 frasco"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_2",
+      "label": "Selling plan: 2 frascos"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_3",
+      "label": "Selling plan: 3 frascos"
+    },
+    {
+      "type": "header",
+      "content": "Partes de la landing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_topbar",
+      "label": "Mostrar barra de ofertas de arriba",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header",
+      "label": "Mostrar header propio de la landing (desactívalo si el tema ya tiene header)",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_footer",
+      "label": "Mostrar footer propio de la landing (desactívalo si el tema ya tiene footer)",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "OvaBloom Landing"
+    }
+  ]
+}
+{% endschema %}

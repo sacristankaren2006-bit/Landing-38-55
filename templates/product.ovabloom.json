@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "ovabloom": {
+      "type": "ovabloom-landing",
+      "settings": {
+        "show_topbar": true,
+        "show_header": false,
+        "show_footer": false
+      }
+    }
+  },
+  "order": [
+    "ovabloom"
+  ]
+}
